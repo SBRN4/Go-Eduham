@@ -1,20 +1,40 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { View } from "react-native";
 
-export default function App() {
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+
+import SplashScreen from "./components/screens/splashScreen";
+import Home from "./components/screens/home";
+import PengHAM from "./components/screens/pengHAM";
+import CiriHAM from "./components/screens/ciriHAM";
+import JenisHAM from "./components/screens/jenisHAM";
+import ContohHAM from "./components/screens/contohHAM";
+import quiz from "./components/screens/quiz";
+
+const Stack = createStackNavigator();
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={{ flex: 1 }}>
+      <NavigationContainer>
+        <Stack.Navigator
+          initialRouteName="quiz"
+          screenOptions={{
+            headerShown: false,
+          }}
+        >
+          <Stack.Screen name="splashScreen" component={SplashScreen} />
+          <Stack.Screen name="home" component={Home} />
+          <Stack.Screen name="pengHAM" component={PengHAM} />
+          <Stack.Screen name="ciriHAM" component={CiriHAM} />
+          <Stack.Screen name="jenisHAM" component={JenisHAM} />
+          <Stack.Screen name="contohHAM" component={ContohHAM} />
+          <Stack.Screen name="quiz" component={quiz} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
