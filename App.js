@@ -11,6 +11,7 @@ import CiriHAM from "./components/screens/ciriHAM";
 import JenisHAM from "./components/screens/jenisHAM";
 import ContohHAM from "./components/screens/contohHAM";
 import quiz from "./components/screens/quiz";
+import latihan from "./components/screens/latihan";
 
 const Stack = createStackNavigator();
 
@@ -19,7 +20,7 @@ const App = () => {
     <View style={{ flex: 1 }}>
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="quiz"
+          initialRouteName="splashScreen"
           screenOptions={{
             headerShown: false,
           }}
@@ -31,6 +32,7 @@ const App = () => {
           <Stack.Screen name="jenisHAM" component={JenisHAM} />
           <Stack.Screen name="contohHAM" component={ContohHAM} />
           <Stack.Screen name="quiz" component={quiz} />
+          <Stack.Screen name="latihan" component={latihan} />
         </Stack.Navigator>
       </NavigationContainer>
     </View>

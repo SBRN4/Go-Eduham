@@ -83,6 +83,7 @@ const PengHAM = ({ navigation }) => {
         </Text>
       </View>
       <TouchableOpacity
+      onPress={() => navigation.navigate("quiz")}
         style={{
           width: 306,
           height: 50,

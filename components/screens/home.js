@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Image,
 } from "react-native";
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 import BotNav from "../navigation/bottomNav";
 import { globalStyle } from "../../globalStyle";
@@ -39,6 +40,7 @@ const Home = ({ navigation }) => {
         <TextInput
           style={globalStyle.input}
           placeholder="Mau cari penjelasan HAM?"
+          leftIcon={<Icon name="search" size={24} color="black" />}
         />
         <ScrollView
           style={globalStyle.kotak}

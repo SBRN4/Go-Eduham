@@ -30,7 +30,7 @@ export const globalStyle = StyleSheet.create({
 
   text3: {
     fontSize: 24,
-    paddingTop: 20,
+    paddingTop: 32,
     paddingLeft: 20,
     fontWeight: "700",
   },
@@ -62,7 +62,7 @@ export const globalStyle = StyleSheet.create({
     backgroundColor: "white",
     height: 210,
     width: 175,
-    marginTop: 15,
+    marginTop: 22,
     marginLeft: 20,
     borderRadius: 6,
     alignItems: "center",
@@ -100,22 +100,157 @@ export const globalStyle = StyleSheet.create({
 
   bottomNav: {
     height: 70,
-    marginTop: 45,
-    justifyContent: 'center',
+    marginTop:20,
+    justifyContent: "center",
     shadowColor: "black",
     shadowOffset: {
       width: 0,
-      height: -4,
+      height: -5,
     },
     shadowOpacity: 10,
-    shadowRadius: 18,
+    shadowRadius: 5,
     elevation: 10,
-    backgroundColor: 'white',
+    backgroundColor: "white",
   },
 
   buttonNav: {
     width: 22,
     height: 22,
   },
+
+  latihan: {
+    flex: 1,
+    flexDirection: "column",
+    alignItems: "center",
+  },
+
+  nomor: {
+    flexDirection: "row",
+    backgroundColor: "#3A1318",
+    width: 50,
+    height: 50,
+    borderRadius: 10,
+    alignItems: "center",
+    paddingHorizontal: 20,
+  },
+
+  latihan2: {
+    marginTop: 40,
+    justifyContent: "flex-start",
+    width: "100%",
+    marginLeft: 50,
+  },
+
+  latihan3: {
+    marginTop: 40,
+    flexDirection: "column",
+    alignItems: "center",
+  },
+
+  soal: {
+    flexDirection: "row",
+    backgroundColor: "white",
+    borderColor: "#F1F1F1",
+    width: 360,
+    height: 200,
+    borderWidth: 1,
+    padding: 20,
+    borderRadius: 10,
+    alignItems: "center",
+    paddingHorizontal: 10,
+  },
+
+  select: {
+    flexDirection: "row",
+    backgroundColor: "black",
+    borderColor: "#F1F1F1",
+    marginTop: 30,
+    width: 360,
+    height: 50,
+    borderWidth: 1,
+    borderRadius: 10,
+    alignItems: "center",
+    paddingHorizontal: 10,
+  },
+
+  unselect: {
+    flexDirection: "row",
+    backgroundColor: "white",
+    borderColor: "#F1F1F1",
+    marginTop: 30,
+    width: 360,
+    height: 50,
+    borderWidth: 1,
+    borderRadius: 10,
+    alignItems: "center",
+    paddingHorizontal: 10,
+  },
+
+  mainQuiz: {
+    backgroundColor: "white",
+        flex: 1,
+        flexDirection: "column",
+        alignItems: 'center',
+        justifyContent: 'space-between'
+  },
+
+  headMateri: {
+    marginTop: 68,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: '80%',
+    marginBottom: 94
+},
+
+quizReview: {
+  quizReview:{
+    width: '100%',
+    height: 347,
+    backgroundColor: "brown",
+    borderTopLeftRadius: 40,
+    borderTopRightRadius: 40,
+    flexDirection: "column",
+    alignItems: 'center',
+    justifyContent: 'space-between'
+},
+
+jawaban: {
+  backgroundColor: '#27AE60',
+  width: 155,
+  height: 74,
+  borderRadius: 16,
+  flexDirection: 'column',
+  paddingVertical: 12,
+  paddingLeft:16
+},
+
+textJawaban: {
+  color: 'white',
+  fontSize: 13,
+  fontWeight: 500,
+  marginBottom: 8
+},
+
+jawabanSalah: {
+  backgroundColor: '#EB5757',
+  width: 155,
+  height: 74,
+  borderRadius: 16,
+  flexDirection: 'column' ,
+  paddingVertical: 12,
+  paddingLeft:16
+},
+
+buttonCheck: {
+  width: 326,
+  backgroundColor: "brown",
+  height: 48,
+  marginBottom: 16,
+  borderRadius: 6,
+  alignItems: 'center',
+  justifyContent: 'center'
+},
+
+}
 
 });
