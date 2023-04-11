@@ -1,9 +1,8 @@
-import React, {useEffect, useState} from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 
-import { globalStyle } from "../../globalStyle";
+import BotNav from "../navigation/bottomNav";
 
-const App = ({navigation}) => {
+const App = ({ navigation }) => {
   return (
     <View style={{ flex: 1, flexDirection: "column", alignItems: "center" }}>
       <Text style={{ fontWeight: 600, fontSize: 16, marginTop: 40 }}>
@@ -26,7 +25,7 @@ const App = ({navigation}) => {
           }}
         >
           <Image
-            style={{ width: 80, height: 80, marginLeft:10, marginRight:10}}
+            style={{ width: 80, height: 80, marginLeft: 10, marginRight: 10 }}
             source={require("../assets/quiz1.png")}
           />
           <View style={{ marginLeft: 10 }}>
@@ -44,7 +43,7 @@ const App = ({navigation}) => {
               Soal-soal quiz pemahaman HAM
             </Text>
             <TouchableOpacity
-              onPress={() => navigation.navigate("latihan")}
+              onPress={() => navigation.navigate("latihan", { categoryId: 1 })}
               style={{
                 paddingHorizontal: 10,
                 paddingVertical: 4,
@@ -74,7 +73,7 @@ const App = ({navigation}) => {
           }}
         >
           <Image
-            style={{ width: 80, height: 80,marginLeft:10, marginRight:10 }}
+            style={{ width: 80, height: 80, marginLeft: 10, marginRight: 10 }}
             source={require("../assets/quiz2.png")}
           />
           <View style={{ marginLeft: 10 }}>
@@ -92,7 +91,7 @@ const App = ({navigation}) => {
               Soal-soal quiz pemahaman HAM
             </Text>
             <TouchableOpacity
-            onPress={() => this.props.navigation.navigate("latihan")}
+              onPress={() => navigation.navigate("latihan", { categoryId: 2 })}
               style={{
                 paddingHorizontal: 10,
                 paddingVertical: 4,
@@ -109,7 +108,7 @@ const App = ({navigation}) => {
 
         <View
           style={{
-            marginTop:24,
+            marginTop: 24,
             flexDirection: "row",
             backgroundColor: "white",
             borderColor: "#F1F1F1",
@@ -122,7 +121,7 @@ const App = ({navigation}) => {
           }}
         >
           <Image
-            style={{ width: 80, height: 80, marginLeft:10, marginRight:10 }}
+            style={{ width: 80, height: 80, marginLeft: 10, marginRight: 10 }}
             source={require("../assets/quiz3.png")}
           />
           <View style={{ marginLeft: 10 }}>
@@ -140,6 +139,7 @@ const App = ({navigation}) => {
               Soal-soal quiz pemahaman HAM
             </Text>
             <TouchableOpacity
+              onPress={() => navigation.navigate("latihan", { categoryId: 3 })}
               style={{
                 paddingHorizontal: 10,
                 paddingVertical: 4,
@@ -156,7 +156,7 @@ const App = ({navigation}) => {
 
         <View
           style={{
-            marginTop:24,
+            marginTop: 24,
             flexDirection: "row",
             backgroundColor: "white",
             borderColor: "#F1F1F1",
@@ -169,7 +169,7 @@ const App = ({navigation}) => {
           }}
         >
           <Image
-            style={{ width: 80, height: 80, marginLeft:10, marginRight:10 }}
+            style={{ width: 80, height: 80, marginLeft: 10, marginRight: 10 }}
             source={require("../assets/quiz4.png")}
           />
           <View style={{ marginLeft: 10 }}>
@@ -187,6 +187,7 @@ const App = ({navigation}) => {
               Soal-soal quiz pemahaman HAM
             </Text>
             <TouchableOpacity
+              onPress={() => navigation.navigate("latihan", { categoryId: 4 })}
               style={{
                 paddingHorizontal: 10,
                 paddingVertical: 4,

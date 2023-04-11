@@ -63,6 +63,7 @@ const Home = ({ navigation }) => {
 
         <Text style={globalStyle.text3}>Materi Populer</Text>
 
+        
         <View style={{ flexDirection: "row" }}>
           <TouchableOpacity onPress={hamHandler}>
             <View style={globalStyle.view1}>

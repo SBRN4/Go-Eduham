@@ -11,7 +11,7 @@ export default function BotNav() {
       <View style={{ flexDirection: "row", justifyContent: "center" }}>
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate("quiz");
+            navigation.navigate("home");
           }}
         >
           <Image

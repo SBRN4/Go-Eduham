@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
+import { View, Text, TouchableOpacity, Image } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
-
 import axios from "axios";
 import { globalStyle } from "../../globalStyle";
 
-const App = ({navigation }) => {
+
+const App = ({navigation, route}) => {
   const [page, setPage] = useState(1);
   const [jawaban, setJawaban] = useState("");
   const [quiz, setQuiz] = useState([]);
   const [nilai, setNilai] = useState(0);
+  const {categoryId} = route.params;
+  console.log(route.params)
   // console.log("ini category", JSON.stringfy(categoryId));
 
   const getMateri = () => {
     axios
-      .get("https://9247-114-142-168-43.ap.ngrok.io/api/quizzes/category/1")
+      .get(`https://5952-114-142-170-44.ap.ngrok.io/api/quizzes/category/${categoryId}`)
       .then((response) => {
         setQuiz(response.data);
       })
